@@ -1,0 +1,152 @@
+body{
+    margin:0;
+    padding:0;
+    background:#cfcfcf;
+    font-family:
+"MS PGothic",
+"MS UI Gothic",
+sans-serif;
+    color:#222;
+    font-size:14px;
+}
+
+.wrapper{
+    width:960px;
+    margin:18px auto;
+    background:#ffffff;
+    border:1px solid #888;
+}
+
+.header{
+    position:relative;
+    height:140px;
+    overflow:hidden;
+    border-bottom:1px solid #666;
+}
+
+.header img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    filter:contrast(95%) saturate(80%);
+}
+
+.header-overlay{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,20,40,0.45);
+}
+
+.header-text{
+    position:absolute;
+    left:20px;
+    bottom:18px;
+    color:white;
+}
+
+.header-text h1{
+    margin:0;
+    font-size:30px;
+    letter-spacing:1px;
+}
+
+.sub{
+    font-size:11px;
+    margin-top:5px;
+    color:#ddd;
+}
+
+.nav{
+    background:#efefef;
+    border-top:1px solid #888;
+    border-bottom:1px solid #888;
+    padding:8px;
+}
+
+.nav a{
+    color:#003366;
+    text-decoration:none;
+    margin-right:18px;
+    font-size:13px;
+}
+
+.nav a:hover{
+    text-decoration:underline;
+}
+
+.main{
+    display:flex;
+}
+
+.sidebar{
+    width:250px;
+    background:#f5f5f5;
+    border-right:1px solid #ccc;
+    padding:15px;
+}
+
+.content{
+    flex:1;
+    padding:20px;
+}
+
+.box{
+    margin-bottom:18px;
+    padding-bottom:12px;
+    border-bottom:1px dashed #aaa;
+}
+
+.date{
+    font-size:11px;
+    color:#666;
+    margin-bottom:4px;
+}
+
+.notice{
+    background:#fafafa;
+    border:1px solid #ccc;
+    padding:12px;
+    margin-top:20px;
+}
+
+.footer{
+    background:#efefef;
+    border-top:1px solid #ccc;
+    text-align:center;
+    padding:10px;
+    font-size:11px;
+    color:#555;
+}
+
+table{
+    border-collapse:collapse;
+    width:100%;
+    margin-top:10px;
+}
+
+td, th{
+    border:1px solid #aaa;
+    padding:8px;
+    font-size:13px;
+}
+
+input{
+    border:1px solid #888;
+    padding:4px;
+    font-family:"MS PGothic", sans-serif;
+}
+
+button{
+    border:1px solid #666;
+    background:#e5e5e5;
+    padding:4px 10px;
+    font-family:"MS PGothic", sans-serif;
+}
+
+.small{
+    font-size:11px;
+    color:#666;
+}

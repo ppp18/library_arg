@@ -1,0 +1,447 @@
+/* ==========================================================
+   Sarashima Junior High School Web Mail Service
+   mail.css
+   ========================================================== */
+
+body{
+    margin:0;
+    padding:0;
+    background:#c8d0da;
+    color:#222;
+    font-family:"MS PGothic","MS UI Gothic",sans-serif;
+    font-size:13px;
+}
+
+a{
+    color:#003399;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.wrapper{
+    width:1100px;
+    margin:20px auto;
+    background:#fff;
+    border:1px solid #7e8b97;
+    box-shadow:0 0 8px rgba(0,0,0,.15);
+}
+
+/* ==========================
+   Header
+   ========================== */
+
+.header{
+    position:relative;
+    height:170px;
+    overflow:hidden;
+}
+
+.header-image{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+}
+
+.header-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(10,25,45,.40);
+}
+
+.header-text{
+    position:absolute;
+    left:25px;
+    bottom:18px;
+    color:#fff;
+}
+
+.header-text h1{
+    margin:0;
+    padding:0;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.subtitle{
+    margin-top:6px;
+    font-size:13px;
+    letter-spacing:1px;
+    color:#ececec;
+}
+
+/* ==========================
+   Toolbar
+   ========================== */
+
+.toolbar{
+    background:#edf2f8;
+    border-top:1px solid #cfd7df;
+    border-bottom:1px solid #bcc7d1;
+    padding:10px 18px;
+    overflow:hidden;
+}
+
+.welcome{
+    font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    "MS Mincho",
+    serif;
+
+    font-style:italic;
+    font-size:16px;
+    color:#333;
+}
+
+.right{
+    float:right;
+}
+
+/* ==========================
+   System Banner
+   ========================== */
+
+.system-banner{
+    display:block;
+    margin:15px;
+    padding:14px 18px;
+    background:#fff8d9;
+    border:1px solid #d2c98d;
+    color:#333;
+    transition:.15s;
+}
+
+.system-banner:hover{
+    background:#fff2b8;
+}
+
+.banner-title{
+    color:#8c0000;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.banner-body{
+    line-height:1.6;
+    font-size:13px;
+}
+
+/* ==========================
+   Main Layout
+   ========================== */
+
+.container{
+    display:flex;
+    min-height:550px;
+}
+
+.sidebar{
+    width:220px;
+    background:#f4f4f4;
+    border-right:1px solid #ccc;
+}
+
+.folder{
+    padding:12px 15px;
+    border-bottom:1px solid #ddd;
+    cursor:pointer;
+    transition:.15s;
+}
+
+.folder:hover{
+    background:#eef5ff;
+}
+
+.folder.active{
+    background:#dce7f4;
+    font-weight:bold;
+}
+
+.mail-list{
+    flex:1;
+    padding:20px;
+}
+
+/* ==========================
+   Mail Table
+   ========================== */
+
+.mail-list table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.mail-list th{
+    background:#ececec;
+    border:1px solid #b8b8b8;
+    padding:8px;
+    text-align:left;
+}
+
+.mail-list td{
+    border:1px solid #c4c4c4;
+    padding:8px;
+}
+
+.mail-list tr:hover{
+    background:#f8fbff;
+}
+
+.locked{
+    color:#999;
+    background:#fafafa;
+}
+
+.locked td{
+    color:#999;
+}
+
+/* ==========================
+   Common Content
+   ========================== */
+
+.content{
+    padding:25px;
+    line-height:1.8;
+}
+
+.content h2{
+    margin:0 0 15px;
+    padding:6px 10px;
+    font-size:18px;
+    background:#eef2f7;
+    border-left:5px solid #5d7fa6;
+    border-bottom:1px solid #c6d0da;
+}
+
+/* ==========================
+   Common Table
+   ========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#efefef;
+    border:1px solid #bdbdbd;
+    text-align:left;
+    padding:8px;
+    font-weight:bold;
+}
+
+table td{
+    border:1px solid #c8c8c8;
+    padding:8px;
+}
+
+/* ==========================
+   Recovery
+   ========================== */
+
+.status-box{
+    background:#f8fafc;
+    border:1px solid #c8d3df;
+    padding:20px;
+    margin-bottom:25px;
+}
+
+.progress{
+    width:100%;
+    height:22px;
+    background:#dadada;
+    border:1px solid #9b9b9b;
+    margin-top:15px;
+}
+
+.progress-bar{
+    height:22px;
+    background:#4d7fb8;
+}
+
+.percent{
+    margin-top:8px;
+    text-align:right;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.notice{
+    margin-top:20px;
+    background:#fffde8;
+    border:1px solid #d8cf98;
+    padding:15px;
+    line-height:1.8;
+}
+
+/* ==========================
+   Mail View
+   ========================== */
+
+.mail-view{
+    padding:25px;
+}
+
+.mail-header{
+    margin-bottom:20px;
+}
+
+.mail-header table{
+    width:100%;
+}
+
+.mail-header th{
+    width:120px;
+    background:#ececec;
+}
+
+.mail-body{
+    border:1px solid #cfcfcf;
+    padding:20px;
+    background:#fff;
+    line-height:2;
+    min-height:260px;
+}
+
+.mail-body p{
+    margin:0 0 16px;
+}
+
+.back-link{
+    margin-top:20px;
+}
+
+/* ==========================
+   Notice List
+   ========================== */
+
+.notice-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.notice-table td{
+    padding:10px;
+}
+
+.notice-date{
+    width:140px;
+    color:#666;
+    white-space:nowrap;
+}
+
+.notice-table tr:hover{
+    background:#f7fbff;
+}
+
+/* ==========================
+   Small Components
+   ========================== */
+
+.small{
+    font-size:12px;
+    color:#666;
+}
+
+.center{
+    text-align:center;
+}
+
+.right-align{
+    text-align:right;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.gray{
+    color:#888;
+}
+
+/* ==========================
+   Footer
+   ========================== */
+
+footer{
+    background:#efefef;
+    border-top:1px solid #c9c9c9;
+    padding:10px;
+    text-align:center;
+    font-size:12px;
+    color:#555;
+}
+
+/* ==========================
+   Utility
+   ========================== */
+
+hr{
+    border:none;
+    border-top:1px solid #d5d5d5;
+    margin:20px 0;
+}
+
+.box{
+    border:1px solid #cfcfcf;
+    background:#fafafa;
+    padding:15px;
+    margin-bottom:20px;
+}
+
+.date{
+    color:#777;
+    font-size:12px;
+}
+
+input[type="text"],
+input[type="password"]{
+    border:1px solid #aaa;
+    padding:5px;
+    font-family:"MS PGothic","MS UI Gothic",sans-serif;
+    font-size:13px;
+}
+
+button,
+input[type="submit"]{
+    padding:5px 12px;
+    border:1px solid #888;
+    background:#ececec;
+    cursor:pointer;
+}
+
+button:hover,
+input[type="submit"]:hover{
+    background:#dfe7f3;
+}
+
+.recover-link{
+
+display:inline-block;
+
+margin-top:8px;
+
+padding:8px 14px;
+
+border:1px solid #8ca3bc;
+
+background:#eef4fb;
+
+color:#003399;
+
+font-weight:bold;
+
+}
+
+.recover-link:hover{
+
+background:#dfeaf8;
+
+}
+
