@@ -2,51 +2,145 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>login for student</title>
+<title>生徒ログイン | 更嶋市立更嶋中学校</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="topbar">
 
-<div class="header">
-<h1>校内システムログイン</h1>
-<div class="sub">Student Web Mail System</div>
-</div>
+    <div class="logo">
+        更嶋市立更嶋中学校
+    </div>
 
-<div class="content">
-
-<h2>認証</h2>
-
-<table>
-<tr>
-<td width="180">学籍番号</td>
-<td><input type="text"></td>
-</tr>
-
-<tr>
-<td>パスワード</td>
-<td><input type="password"></td>
-</tr>
-</table>
-
-<br>
-
-<button>ログイン</button>
-
-<p class="small">
-※ 生徒用メールアカウントを入力してください<br>
-※ 半角英数字のみ使用可能
-</p>
+    <div class="sub">
+        Sarashima Municipal Junior High School
+    </div>
 
 </div>
 
-<div class="footer">
-Yugure School Server ver 2.3
-</div>
+<div class="container">
+
+    <div class="sidebar">
+
+        <div class="menu-title">
+            MENU
+        </div>
+
+        <div class="menu">
+            <a href="index.html">トップ</a>
+            <a href="principal.html">校長あいさつ</a>
+            <a href="guide.html">学校案内</a>
+            <a href="result.html">生徒の活躍</a>
+            <a href="calendar.html">年間行事</a>
+            <a href="news.html">お知らせ</a>
+            <a href="login.html">生徒ログイン</a>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="content">
+
+            <h2>校内メールシステム ログイン</h2>
+
+            <p>
+                学籍番号と暗証番号を入力してください。
+            </p>
+
+            <div class="info-box">
+
+                <table>
+
+                    <tr>
+                        <th width="180">学籍番号</th>
+                        <td>
+                            <input
+                                type="text"
+                                id="student"
+                                maxlength="6"
+                                autocomplete="off">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>暗証番号</th>
+                        <td>
+                            <input
+                                type="password"
+                                id="password"
+                                maxlength="4"
+                                autocomplete="off">
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <br>
+
+            <button onclick="login()">
+                ログイン
+            </button>
+
+            <p id="error" class="small" style="color:red;"></p>
+
+            <p class="small">
+                ※ 学籍番号は6桁で入力してください。<br>
+                ※ 暗証番号は4桁です。
+            </p>
+
+        </div>
+
+        <div class="footer">
+            © 2001 Sarashima Municipal Junior High School
+        </div>
+
+    </div>
 
 </div>
+
+<script>
+
+function login(){
+
+    const id = document.getElementById("student").value.trim();
+    const pass = document.getElementById("password").value.trim();
+
+    // B
+    if(id === "081086" && pass === "0530"){
+        window.location.href = "mailbox/mailbox.html";
+        return;
+    }
+
+    // A
+    if(id === "081018" && pass === "0218"){
+        window.location.href = "mailbox/mailbox_1.html";
+        return;
+    }
+
+    document.getElementById("error").textContent =
+    "学籍番号または暗証番号が正しくありません。";
+
+}
+
+// Enterキーでもログイン
+document.getElementById("student").addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+        login();
+    }
+});
+
+document.getElementById("password").addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+        login();
+    }
+});
+
+</script>
 
 </body>
 </html>
