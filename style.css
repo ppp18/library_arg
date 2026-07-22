@@ -1,73 +1,116 @@
+/*==================================================
+  school.css
+  Sarashima Municipal Junior High School Website
+==================================================*/
+
 body{
     margin:0;
+    padding:0;
     background:#c0c0c0;
-    font-family:"MS PGothic",sans-serif;
+    font-family:"MS PGothic","MS UI Gothic",sans-serif;
     font-size:13px;
-    color:#000;
+    color:#222;
 }
 
+a{
+    color:#003399;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/*==============================
+  Header
+==============================*/
+
 .topbar{
+
+    position:relative;
 
     height:120px;
 
     background-image:url("DSC01067.JPG");
 
-    background-size:120% 100%;
+    background-size:cover;
 
     background-position:center;
 
-    background-repeat:no-repeat;
+    border-bottom:2px solid #808080;
 
-    color:white;
-
-    padding:15px;
-
-    border-bottom:2px solid #000080;
+    color:#fff;
 
     box-sizing:border-box;
 
 }
 
+.topbar::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,25,45,.35);
+
+}
+
 .logo{
 
-    font-family:
-    "MS Mincho",
-    "ＭＳ 明朝",
-    serif;
+    position:relative;
 
-    font-size:32px;
+    padding:38px 22px 0;
+
+    font-family:
+        "MS Mincho",
+        "ＭＳ 明朝",
+        serif;
+
+    font-size:30px;
 
     font-weight:bold;
 
-    text-shadow:1px 1px 0 #000080;
-
-    margin-top:8px;
+    text-shadow:1px 1px 2px #000;
 
 }
 
 .sub{
 
-    margin-top:6px;
+    position:relative;
+
+    padding-left:24px;
+
+    margin-top:4px;
 
     font-size:12px;
 
+    color:#f0f0f0;
+
+    letter-spacing:1px;
+
 }
+
+/*==============================
+  Layout
+==============================*/
 
 .container{
 
     display:flex;
 
-    height:calc(100vh - 110px);
+    min-height:calc(100vh - 120px);
 
 }
 
 .sidebar{
 
-    width:210px;
+    width:220px;
 
     background:#dcdcdc;
 
-    border-right:2px solid #808080;
+    border-right:2px solid #888;
 
     padding:10px;
 
@@ -75,17 +118,39 @@ body{
 
 }
 
+.main{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#fff;
+
+}
+
+/*==============================
+  Sidebar
+==============================*/
+
 .menu-title{
 
     background:#808080;
 
-    color:white;
+    color:#fff;
 
-    padding:4px;
+    padding:4px 6px;
+
+    margin-bottom:8px;
 
     font-weight:bold;
 
-    margin-bottom:8px;
+}
+
+.menu{
+
+    margin-bottom:20px;
 
 }
 
@@ -93,43 +158,35 @@ body{
 
     display:block;
 
-    color:#0000cc;
+    padding:5px 4px;
 
-    text-decoration:none;
-
-    margin-bottom:6px;
+    color:#003399;
 
 }
 
 .menu a:hover{
 
-    text-decoration:underline;
+    background:#efefef;
 
 }
 
 .storage{
 
-    border:1px solid #808080;
+    border:1px solid #999;
 
-    background:#efefef;
+    background:#fafafa;
 
-    padding:8px;
+    padding:10px;
+
+    line-height:1.8;
 
     font-size:12px;
 
 }
 
-.main{
-
-    flex:1;
-
-    background:white;
-
-    display:flex;
-
-    flex-direction:column;
-
-}
+/*==============================
+  Content
+==============================*/
 
 .content{
 
@@ -143,133 +200,70 @@ body{
 
 .content h2{
 
-    border-bottom:2px solid #808080;
+    margin:0 0 18px;
 
-    padding-bottom:5px;
+    padding:7px 10px;
 
-}
-
-.content img{
-
-    margin-top:15px;
-
-    border:1px solid #888;
-
-    max-width:100%;
-
-    height:auto;
-
-}
-
-.notice{
-
-    margin-top:25px;
-
-    padding:12px;
-
-    border:1px solid #999;
-
-    background:#f7f7f7;
-
-}
-
-.footer{
-
-    border-top:1px solid #999;
+    font-size:20px;
 
     background:#efefef;
 
-    padding:8px;
+    border-left:5px solid #5d7fa6;
 
-    text-align:center;
-
-    font-size:11px;
-
-    color:#555;
-
-}
-
-/* 学校概要テーブル */
-
-.info-box{
-    margin-top:10px;
-    margin-bottom:20px;
-}
-
-.info-box table{
-    width:100%;
-    border-collapse:collapse;
-    border:1px solid #808080;
-    background:#ffffff;
-}
-
-.info-box th{
-    width:220px;
-    background:#e5e5e5;
-    border:1px solid #808080;
-    padding:8px;
-    text-align:left;
-    font-weight:bold;
-}
-
-.info-box td{
-    border:1px solid #808080;
-    padding:8px;
-    background:#ffffff;
-}
-
-/* 校長あいさつ */
-
-.small-date{
-    margin-top:-8px;
-    margin-bottom:20px;
-    font-size:12px;
-    color:#666;
-}
-
-.greeting{
-    line-height:2.0;
-    text-indent:1em;
-}
-
-.principal-sign{
-    margin-top:30px;
-    text-align:right;
-    line-height:1.8;
-}
-
-input{
-
-    width:180px;
-
-    padding:5px;
-
-    border:1px solid #808080;
-
-    font-family:"MS PGothic",sans-serif;
-
-}
-
-button{
-
-    padding:5px 18px;
-
-    border:1px solid #808080;
-
-    background:#e5e5e5;
-
-    cursor:pointer;
-
-}
-
-button:hover{
-
-    background:#dcdcdc;
+    border-bottom:1px solid #bbb;
 
 }
 
 /*==============================
-  生徒の活躍一覧
+  Tables
+==============================*/
+
+.info-box{
+
+    border:1px solid #999;
+
+    background:#fafafa;
+
+    margin-bottom:20px;
+
+}
+
+.info-box table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.info-box th{
+
+    width:220px;
+
+    background:#efefef;
+
+    border:1px solid #aaa;
+
+    padding:8px;
+
+    text-align:left;
+
+}
+
+.info-box td{
+
+    border:1px solid #aaa;
+
+    padding:10px;
+
+    line-height:1.8;
+
+    background:#fff;
+
+}
+
+/*==============================
+  News Table
 ==============================*/
 
 .notice-table{
@@ -304,11 +298,13 @@ button:hover{
 
     line-height:1.8;
 
+    background:#fff;
+
 }
 
 .notice-table tr:hover td{
 
-    background:#f6faff;
+    background:#f5f9ff;
 
 }
 
@@ -317,6 +313,182 @@ button:hover{
     width:140px;
 
     white-space:nowrap;
+
+    color:#666;
+
+}
+
+/*==============================
+  Greeting
+==============================*/
+
+.small-date{
+
+    font-size:12px;
+
+    color:#666;
+
+    margin-bottom:18px;
+
+}
+
+.greeting{
+
+    line-height:2;
+
+    text-indent:1em;
+
+}
+
+.principal-sign{
+
+    margin-top:30px;
+
+    text-align:right;
+
+    line-height:1.8;
+
+}
+
+/*==============================
+  Images
+==============================*/
+
+.content img{
+
+    margin:15px 0;
+
+    max-width:100%;
+
+    border:1px solid #999;
+
+    background:#fff;
+
+    padding:4px;
+
+}
+
+/*==============================
+  Notice Box
+==============================*/
+
+.notice{
+
+    border:1px solid #d5cf95;
+
+    background:#fffde8;
+
+    padding:15px;
+
+    line-height:1.8;
+
+    margin-top:20px;
+
+}
+
+/*==============================
+  Forms
+==============================*/
+
+input{
+
+    border:1px solid #888;
+
+    padding:5px;
+
+    font-family:"MS PGothic",sans-serif;
+
+    font-size:13px;
+
+}
+
+button{
+
+    border:1px solid #777;
+
+    background:#ececec;
+
+    padding:5px 12px;
+
+    cursor:pointer;
+
+    font-family:"MS PGothic",sans-serif;
+
+}
+
+button:hover{
+
+    background:#dfe8f4;
+
+}
+
+/*==============================
+  Utility
+==============================*/
+
+.small{
+
+    font-size:11px;
+
+    color:#666;
+
+}
+
+.center{
+
+    text-align:center;
+
+}
+
+.right{
+
+    text-align:right;
+
+}
+
+.gray{
+
+    color:#777;
+
+}
+
+.box{
+
+    border:1px solid #bbb;
+
+    background:#fafafa;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+}
+
+hr{
+
+    border:none;
+
+    border-top:1px solid #d5d5d5;
+
+    margin:20px 0;
+
+}
+
+/*==============================
+  Footer
+==============================*/
+
+.footer{
+
+    background:#efefef;
+
+    border-top:1px solid #bdbdbd;
+
+    text-align:center;
+
+    padding:10px;
+
+    font-size:11px;
 
     color:#555;
 
